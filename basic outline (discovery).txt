@@ -1,0 +1,18 @@
+
+Who am I? 
+Mahek Patel
+An student in computer Science
+what do I want? 
+A personal website that can help me showcase myself and my skills and projects
+
+Who is my audience? 
+Recturiters/Promoters mainly 
+what do they want? 
+To be able to see my skills and projects and make it easier, having everthing in one place
+
+FEATURES
+home
+about
+resume
+projects
+contact

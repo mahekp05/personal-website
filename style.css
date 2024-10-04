@@ -1,0 +1,206 @@
+/* FONTS */
+/* Define the Protest Strike font style */
+.protest-strike-regular {
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Define the Permanent Marker font style */
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden; /* This disables horizontal scrolling */
+    margin: 0;
+    padding: 0;
+}
+
+/* GLOBAL STYLES */
+/* Reset default margins and paddings for all elements, 
+   and set the default font to "Protest Strike" */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Protest Strike", sans-serif;
+    box-sizing: border-box; /* Ensure padding and borders are included in the element's width/height */
+}
+
+/* BODY */
+/* Background color and default text color for the body */
+body {
+    background-color: #9379c2;
+    color: #877978;
+}
+
+/* HEADER */
+/* Set the width and height of the header and ensure background is centered */
+#header {
+    width: 100%;
+    height: 10vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* CONTAINER */
+/* Add padding around the content inside the container */
+.container {
+    padding: 3px 3%;
+    background-color: #9379c2; /* Matches the body background color */
+}
+
+/* NAVIGATION BAR */
+/* Style the nav elements: 
+   - flexbox layout to align items horizontally
+   - space them out evenly with 'justify-content'
+   - ensure no default bullet points with 'list-style: none'
+   - flex-wrap set to 'nowrap' to keep items in one row */
+nav {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 20px;
+    flex-wrap: nowrap;
+}
+
+/* NAVIGATION LIST ITEMS */
+/* Target <li> elements inside nav to add margin between items
+   and apply the "Permanent Marker" font to the text */
+nav li {
+    margin: 0 15px;
+    text-decoration: none;
+    font-family: "Permanent Marker", cursive; /* Custom font for navigation items */
+}
+
+/* NAVIGATION LINKS */
+/* Remove underline for links inside the nav 
+   and set a soft color for the links */
+nav a {
+    text-decoration: none;
+    color: rgb(213, 201, 201);
+}
+
+/* ABOUT SECTION */
+/* About section styles:
+   - Full width
+   - Background color
+   - Padding to add space around the content
+   - No extra margins */
+#About {
+    width: 100%;
+    background-color: #eadfde; /* Light background for About section */
+    padding: 40px 8%; /* Adds space inside the section */
+    text-align: left; /* Align text to the left */
+}
+
+/* ABOUT SECTION PARAGRAPH */
+/* Style the paragraph inside the About section */
+#About p {
+    font-family: 'Times New Roman', Times, serif; /* Classic serif font for the text */
+    font-size: 1rem; /* Adjust font size for readability */
+    line-height: 1.5; /* Increased line-height for better spacing between lines */
+    color: #000; /* Set text color to black for better contrast */
+}
+
+/* CONTENT CLASS */
+/* Adds padding inside elements that have the "content" class */
+.content {
+    padding: 8px 8%; /* Adds space inside the content elements */
+}
+
+/* PROJECTS SECTION */
+/* Projects section styles:
+   - Flexbox layout to wrap project cards
+   - Space them out evenly with 'justify-content'
+   - Adds padding around the section
+   - Sets a background color matching the body */
+#Projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #9379c2;
+    padding: 40px;
+}
+
+/* Project Card */
+/* Style for individual project cards:
+   - Light background color for contrast
+   - Box shadow to add depth
+   - Rounded corners */
+.project-card {
+    background-color: #fff; /* Changed for better contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Each card takes up 30% of the width */
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Project Titles */
+/* Style for the h3 elements inside project cards:
+   - Serif font for classic look
+   - Custom color */
+.project-card h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Classic serif font */
+    color: #9379c2; /* Custom contrast color for project titles */
+    font-size: 1.2rem; /* Adjusted font size */
+    margin-bottom: 10px;
+}
+
+/* Style for h3 elements inside the overall #Projects section */
+#Projects h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white; /* White font for general project titles */
+}
+
+/* Project Descriptions */
+/* Style for the paragraph inside project cards:
+   - Custom text color for readability */
+.project-card p {
+    font-size: 1rem; /* Font size for project descriptions */
+    color: rgb(79, 32, 110); /* Dark purple for contrast */
+}
+
+/* Paragraph text inside the #Projects section */
+#Projects p {
+    color: rgb(187, 170, 221); /* Light purple for descriptions in Projects section */
+}
+
+/* Links inside Project Cards */
+/* Styling the links inside the project cards:
+   - Custom color for links */
+.project-card a {
+    display: block;
+    margin: 10px 0;
+    color: #5f27cd; /* Link color */
+}
+
+/* General links inside the #Projects section */
+#Projects a {
+    color: rgb(79, 32, 110); /* Dark purple for general links */
+}
+
+/* Hover effect for links inside project cards */
+.project-card a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    color: #ff4500; /* Optional hover color for links */
+}
+
+/* CONTACT SECTION */
+/* Contact section styles:
+   - Full width
+   - Set height and background properties */
+#Contact {
+    width: 100%;
+    height: 30vh; /* Height for the Contact section */
+    background-size: cover;
+    background-position: center;
+    background-color: #eadfde; /* Light background color for Contact section */
+}
