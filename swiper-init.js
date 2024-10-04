@@ -1,6 +1,6 @@
 window.onload = function() {
     const swiper = new Swiper('.swiper-container', {
-        loop: true, // Enables looping
+        loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -10,9 +10,10 @@ window.onload = function() {
             clickable: true,
         },
         autoplay: {
-            delay: 5000, // Auto-slide every 5 seconds
+            delay: 5000,
         },
-        slidesPerView: 1, // Show one slide at a time
-        spaceBetween: 30, // Adds space between slides
+        slidesPerView: 1,
+        spaceBetween: 30,
+        lazy: true,  // Enable lazy loading
     });
 };

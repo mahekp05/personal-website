@@ -53,6 +53,7 @@ body {
     background-color: #9379c2; /* Matches the body background color */
 }
 
+/*---------------------------------------------------------------------------------------------------*/
 /* NAVIGATION BAR */
 /* Style the nav elements: 
    - flexbox layout to align items horizontally
@@ -86,6 +87,7 @@ nav a {
     color: rgb(213, 201, 201);
 }
 
+/*---------------------------------------------------------------------------------------------------*/
 /* ABOUT SECTION */
 /* About section styles:
    - Full width
@@ -99,6 +101,7 @@ nav a {
     text-align: left; /* Align text to the left */
 }
 
+/*---------------------------------------------------------------------------------------------------*/
 /* ABOUT SECTION PARAGRAPH */
 /* Style the paragraph inside the About section */
 #About p {
@@ -114,6 +117,8 @@ nav a {
     padding: 8px 8%; /* Adds space inside the content elements */
 }
 
+
+/*---------------------------------------------------------------------------------------------------*/
 /* PROJECTS SECTION */
 /* Projects section styles:
    - Flexbox layout to wrap project cards
@@ -179,7 +184,7 @@ nav a {
 .project-card a {
     display: block;
     margin: 10px 0;
-    color: #5f27cd; /* Link color */
+    color: #9379c2; /* Link color */
 }
 
 /* General links inside the #Projects section */
@@ -193,6 +198,41 @@ nav a {
     color: #ff4500; /* Optional hover color for links */
 }
 
+/*---------------------------------------------------------------------------------------------------*/
+/* SWIPER STYLES */
+/* Swiper container: Set width and height */
+.swiper-container {
+    width: 100%;
+    height: 400px; /* Set a fixed height for the Swiper container */
+}
+
+/* Swiper slides: Flexbox layout to center content */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it takes up the full container height */
+    background-color: #9379c2; /* Background color to make slides stand out */
+    color: #ffffff; /* Set text color to white */
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+/* Swiper pagination bullets: Set color */
+.swiper-pagination-bullet {
+    background-color: #fff; /* White bullets for pagination */
+}
+
+/* Swiper navigation buttons: Set color */
+.swiper-button-next, .swiper-button-prev {
+    color: #ffffff; /* Custom color for navigation arrows */
+}
+
+/* Swiper navigation buttons: Hover effect */
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    color: #ffffff; /* Color change on hover for navigation buttons */
+}
+
+/*---------------------------------------------------------------------------------------------------*/
 /* CONTACT SECTION */
 /* Contact section styles:
    - Full width
