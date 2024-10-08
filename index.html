@@ -102,7 +102,7 @@
           ];
       
           return (
-            <div id="Projects">
+            <div className="scroll-container-horizontal">
               {projectList.map((project, index) => (
                 <Project key={index} title={project.title} description={project.description} link={project.link} />
               ))}

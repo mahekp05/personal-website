@@ -141,8 +141,22 @@ nav a {
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: #9379c2;
-    padding: 40px;
+    /*padding: 40px;*/
 }
+
+.scroll-container-horizontal {
+    display: flex;                 /* Flexbox to align project cards horizontally */
+    overflow-x: auto;              /* Enable horizontal scrolling */
+    white-space: nowrap;           /* Prevent wrapping of the cards */
+    gap: 40px;                     /* Space between the project cards */
+    padding: 20px;
+    scrollbar-width: none;
+}
+
+.scroll-container-horizontal::-webkit-scrollbar {
+    display: none;                    /* For Chrome, Safari, and Opera: Hide scrollbar */
+}
+
 
 /* Project Card */
 /* Style for individual project cards:
@@ -150,13 +164,18 @@ nav a {
    - Box shadow to add depth
    - Rounded corners */
 .project-card {
+    flex: 0 0 500px;                /* Ensure the cards do not shrink and maintain their width */
+    min-height: 250px;
     background-color: #fff; /* Changed for better contrast */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%; /* Each card takes up 30% of the width */
-    margin: 20px;
+    width: 40%; /* Each card takes up 30% of the width */
+    margin: 0 20px;
     padding: 20px;
     text-align: center;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 
