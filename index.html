@@ -17,77 +17,103 @@
 </head>
 <body>
 
-    <div id = "header">
+    <div id = "Home">
         <div class = "container">
             <nav>
                 <li>Mahek Patel</li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#react-projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
             </nav>
         </div>
     </div>
 
     <div id = 'About'>
-        <div class = "content">
-            <p> 
-                Hello! My name is Mahek Patel, and I am currently pursuing a degree in Computer Science at the University of South Florida. I am passionate about leveraging technology to solve real-world problems, and I’m always eager to learn new things, explore cutting-edge technologies, and build innovative projects.    
-            </p>
-        </div>
+            <div class = about-text>
+                <p> 
+                    Hello! My name is Mahek Patel, and I am currently pursuing a degree in Computer Science at the University of South Florida. I am passionate about leveraging technology to solve real-world problems, and I’m always eager to learn new things, explore cutting-edge technologies, and build innovative projects.    
+                </p>
+            </div>
+
+            <div class = 'about-headshot'> 
+                <img src="headshot.jpg" alt="A picture of me" width="300" height="300">
+            </div>
     </div>
 
-    <div id = 'Projects'>
-        <div class = "content">
-            <!-- Swiper container -->
-            <div class="swiper-container">
-                <!-- Swiper Wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <h3>Project 1 - Reinforcement Learning: Super Mario Bros</h3>
-                        <p>A reinforcement learning model that navigates Super Mario Bros.</p>
-                        <img data-src="image-path.jpg" class="swiper-lazy">
-                        <div class="swiper-lazy-preloader"></div>                    
-                        <a href="https://github.com/mahekp05/Reinforcement-Learning-Projects/blob/main/Mario.ipynb">GitHub Repo</a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <h3>Project 2</h3>
-                        <p>Project 2 Description</p>
-                        <a href="#">GitHub Repo</a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <h3>Project 3</h3>
-                        <p>Project 3 Description</p>
-                        <a href="#">GitHub Repo</a>
-                    </div>
-                </div>
-
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Navigation buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-                    
-            </div>
-        </div>
+    <div id = 'react-projects'>        
     </div>
 
     <div id = 'Contact'>
         <div class = "Contact">
-            <nav>
+            <div>
                 <!-- Contact Information Goes Here -->
-            </nav>
+                <a href = "mailto:mahekpatel@usf.edu">Email</a>
+                <a href = "https://www.linkedin.com/in/mahek-p05mp/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/mahekp05">GitHub</a>
+            </div>
         </div>
     </div>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Custom JavaScript to initialize Swiper -->
-    <script src="swiper-init.js"></script>
+    <!-- React and ReactDOM via CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 
+    <!-- Babel for JSX (Development Only) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // React Component for the Projects Section
+        /*
+        Defines template for individual project cards
+        Input: title, description, link
+        Output: return jsx decribing what component should look like in UI -- using h3, p, a
+        */
+        const Project = ({ title, description, link }) => {
+          return (
+            <div className="project-card">
+              <h3>{title}</h3>
+              <p>{description}</p>
+              <a href={link} target="_blank">GitHub Repo</a>
+            </div>
+          );
+        };
+      /*Project renders list of components
+      projectList -- array with each representing a project
+      map() used to iterate over array to create project component for each item*/
+        const Projects = () => {
+          const projectList = [
+            //Project 1
+            { title: 'Reinforcement Learning: Super Mario Bros', 
+            description: 'Developed a reinforcement learning model to autonomously navigate through levels of Super Mario Bros. The model was trained using state-action pairs to maximize rewards, successfully demonstrating an agent capable of learning from gameplay data to optimize performance. Implemented using Python and TensorFlow.', 
+            link: 'https://github.com/mahekp05/Reinforcement-Learning-Projects/blob/main/Mario.ipynb' },            
+            //Project 2
+            { title: 'Voice Assistant', 
+            description: 'Built a voice assistant using Python with text-to-speech and speech recognition functionalities. Integrated libraries like Pyttsx3 and SpeechRecognition, allowing the assistant to perform tasks such as fetching information from the web, playing music, and delivering jokes. Enhanced with Selenium WebDriver for web automation.', 
+            link: 'https://github.com/mahekp05/Voice-Assistant-' },
+            //Project 3
+            { title: 'Flappy Bird', 
+            description: 'Created a fully functional clone of Flappy Bird using Unity and C#. Implemented core gameplay features, including player controls, scoring, difficulty scaling, and object collisions. Integrated Unity’s physics engine to simulate realistic bird movement and obstacle interactions.', 
+            link: '#' },
+            //Project 4
+            { title: 'Data Visualization', 
+            description: 'Leveraged Tableau to build interactive dashboards and visualizations, showcasing insights from complex datasets. Designed charts and graphs to explore trends, compare metrics, and communicate data-driven insights effectively. Shared results through interactive visual reports hosted on Tableau Public', 
+            link: 'https://github.com/mahekp05/tableau-project'}
+          ];
+      
+          return (
+            <div id="Projects">
+              {projectList.map((project, index) => (
+                <Project key={index} title={project.title} description={project.description} link={project.link} />
+              ))}
+            </div>
+          );
+        };
+      
+        // Render the Projects component inside the root div with id="react-projects"
+        ReactDOM.render(<Projects />, document.getElementById('react-projects'));
+      </script>
+      
 
 
 </body>
