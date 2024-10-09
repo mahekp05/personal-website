@@ -1,3 +1,40 @@
+@media (max-width: 768px) {
+    .scroll-container-horizontal {
+        flex-direction: column;    /* Stack project cards vertically on smaller screens */
+        gap: 20px;                 /* Reduce space between the cards */
+    }
+
+    .project-card {
+        flex: 0 0 100%;            /* Make each card take full width on smaller screens */
+        width: 100%;               /* Ensure cards are 100% wide */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        margin: 10px auto;         /* Ensure consistent margins on mobile */
+        padding: 20px;             /* Adjust padding for mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;       /* Slightly reduce font size for better readability */
+    }
+    .project-card h3 {
+        font-size: 1.1rem;     /* Adjust heading size for mobile */
+    }
+    .project-card p {
+        font-size: 0.9rem;     /* Reduce paragraph text for better fit */
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 /* FONTS */
 /* Define the Protest Strike font style */
 .protest-strike-regular {
@@ -97,9 +134,9 @@ nav a {
 #About {
     display: flex;                /* Flexbox for side-by-side layout */
     align-items: center;          /* Vertically align text and image */
-    justify-content: space-between 10%; /* Space between text and image */
+    justify-content: space-between; /* Space between text and image */
     background-color: #eadfde;
-    padding: 40px 8%;
+    padding: 40px 10%;
 }
 
 /*---------------------------------------------------------------------------------------------------*/
@@ -116,7 +153,8 @@ nav a {
 
 /* ABOUT IMAGE STYLING */
 .about-image img {
-    width: 400px;  /* Increase size of the image */
+    width: 100%px;  /* Increase size of the image */
+    max-width: 400px;
     height: auto;  /* Maintain the aspect ratio */
 }
 
@@ -164,7 +202,7 @@ nav a {
    - Box shadow to add depth
    - Rounded corners */
 .project-card {
-    flex: 0 0 500px;                /* Ensure the cards do not shrink and maintain their width */
+    flex: 0 0 40%;                /* Ensure the cards do not shrink and maintain their width */
     min-height: 250px;
     background-color: #fff; /* Changed for better contrast */
     border-radius: 8px;
@@ -176,6 +214,13 @@ nav a {
     overflow: hidden;
     white-space: normal;
     word-wrap: break-word;
+    transition: transform 0.3s ease, box shadow 0.3s ease; /*project-card:hover*/
+}
+
+/*Make project cards slightly scale up or add a shadow when hovered over.*/
+.project-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
 }
 
 
