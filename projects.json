@@ -1,27 +1,32 @@
 [
-    {
-      "title": "Reinforcement Learning: Super Mario Bros",
-      "description": "Developed a reinforcement learning model to autonomously navigate through levels of Super Mario Bros...",
-      "link": "https://github.com/mahekp05/Reinforcement-Learning-Projects/blob/main/Mario.ipynb"
-    },
-    {
-      "title": "Voice Assistant",
-      "description": "Built a voice assistant using Python with text-to-speech and speech recognition functionalities...",
-      "link": "https://github.com/mahekp05/Voice-Assistant-"
-    },
-    {
-      "title": "Flappy Bird",
-      "description": "Created a fully functional clone of Flappy Bird using Unity and C#...",
-      "link": "#"
-    },
-    {
-      "title": "Data Visualization",
-      "description": "Leveraged Tableau to build interactive dashboards and visualizations...",
-      "link": "https://github.com/mahekp05/tableau-project"
-    },
-    {
-      "title": "Painting Rock the Bull in Impressionist Style",
-      "description": "This project applies Neural Style Transfer (NST) to blend a content image with the artistic style of another...",
-      "link": "https://github.com/mahekp05/NST"
-    }
-  ]
+  {
+    "title": "Reinforcement Learning: Super Mario Bros",
+    "description": "Created a model to play Super Mario Bros using reinforcement learning. Trained the model to improve its gameplay by learning from actions and rewards. Used TensorFlow to build neural networks and visualized progress with gameplay videos.",
+    "link": "https://github.com/mahekp05/Reinforcement-Learning-Projects/blob/main/Mario.ipynb"
+  },
+  {
+    "title": "Sentiment Analysis",
+    "description": "Built a machine learning model to classify tweets as positive, negative, or neutral. Achieved 60% accuracy by preprocessing text data and using NLP techniques like NLTK and TF-IDF.",
+    "link": "https://github.com/mahekp05/Sentiment-Analysis"
+  },
+  {
+    "title": "Voice Assistant",
+    "description": "Developed a voice assistant using Python. Integrated text-to-speech and speech-to-text features, and automated web interactions for tasks like Wikipedia searches and music playback. Added APIs for news updates and jokes.",
+    "link": "https://github.com/mahekp05/Voice-Assistant-"
+  },
+  {
+    "title": "Flappy Bird",
+    "description": "Created a clone of Flappy Bird using Unity and C#. Implemented game mechanics, physics, and scoring system to replicate the original game.",
+    "link": "#"
+  },
+  {
+    "title": "Data Visualization",
+    "description": "Designed interactive dashboards using Tableau. Extracted and cleaned data with SQL, and created visualizations for healthcare and manufacturing databases to help stakeholders make informed decisions.",
+    "link": "https://github.com/mahekp05/tableau-project"
+  },
+  {
+    "title": "Painting Rock the Bull in Impressionist Style",
+    "description": "Used Neural Style Transfer (NST) to create an impressionist-style painting of 'Rock the Bull.' Combined a content image with an artistic style using deep learning techniques.",
+    "link": "https://github.com/mahekp05/NST"
+  }
+]
