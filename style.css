@@ -34,7 +34,6 @@ html, body {
 /* Background color and default text color for the body */
 body {
     background-color: #9379c2;
-    color: #877978;
 }
 
 /* HEADER */
@@ -49,8 +48,8 @@ body {
 /* CONTAINER */
 /* Add padding around the content inside the container */
 .container {
-    padding: 3px 3%;
-    background-color: #9379c2; /* Matches the body background color */
+    padding: 1px 3%;
+    background-color:#EACFFF ; /* Matches the body background color */
 }
 
 /*---------------------------------------------------------------------------------------------------*/
@@ -61,13 +60,13 @@ body {
    - ensure no default bullet points with 'list-style: none'
    - flex-wrap set to 'nowrap' to keep items in one row */
 nav {
-    color: black;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center ;
+    justify-content: space-between 10px;
     list-style: none;
     margin: 20px;
     flex-wrap: nowrap;
+    position: fixed;
 }
 
 /* NAVIGATION LIST ITEMS */
@@ -84,7 +83,7 @@ nav li {
    and set a soft color for the links */
 nav a {
     text-decoration: none;
-    color: rgb(213, 201, 201);
+    color: #9D7EC2;
 }
 
 /*---------------------------------------------------------------------------------------------------*/
@@ -98,26 +97,49 @@ nav a {
     display: flex;                /* Flexbox for side-by-side layout */
     align-items: center;          /* Vertically align text and image */
     justify-content: space-between; /* Space between text and image */
-    background-color: #eadfde;
-    padding: 40px 10%;
+    background-color: #EACFFF;
+    padding: 80px 10%;
 }
 
 /*---------------------------------------------------------------------------------------------------*/
 /* ABOUT SECTION PARAGRAPH */
 /* Style the paragraph inside the About section */
 /* ABOUT TEXT STYLING */
-.about-text {
-    width: 60%;                   /* Set width for the text section */
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #000;
+.about-text h1 {
+    width: 100%;                   /* Set width for the text section */
+    padding-bottom: 0%;
+    font-family: 'Corinthia', cursive, bold; /* Use Corinthia font */
+    font-size: 300%;
+    line-height: 2;
+    color: #9D7EC2;
 }
 
+.about-text h3 {
+    width: 100%;                   /* Set width for the text section */
+    padding-top: 0%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150%;
+    line-height: 2;
+    color: #9D7EC2;
+}
+
+.about-text h6 {
+    width: 100%;  
+    padding-top: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: #9D7EC2;
+}
+
+
 /* ABOUT IMAGE STYLING */
+.about-headshot{
+    padding: 30px;
+    max-width: 500px;
+}
 .about-image img {
-    width: 100%px;  /* Increase size of the image */
-    max-width: 400px;
+    width: 80%;  /* Increase size of the image */
     height: auto;  /* Maintain the aspect ratio */
 }
 
@@ -249,13 +271,13 @@ nav a {
     justify-content: center;      /* Center the links horizontally */
     align-items: center;          /* Center vertically */
     height: 15vh;                 /* Reduce the height */
-    background-color: #eadfde;    /* Light background color */
+    background-color: #EACFFF;    /* Light background color */
     padding: 20px;                /* Padding inside the Contact section */
 }
 
 #Contact a {
     font-size: 1.0rem;            /* Increase font size for more emphasis */
-    color: #000;
+    color: #9D7EC2;
     margin-right: 45px;           /* Add more space between the links */
     text-decoration: none;        /* Optional: Remove underline */
 }

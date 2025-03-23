@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Reinforcement Learning: Super Mario Bros",
+      "description": "Developed a reinforcement learning model to autonomously navigate through levels of Super Mario Bros...",
+      "link": "https://github.com/mahekp05/Reinforcement-Learning-Projects/blob/main/Mario.ipynb"
+    },
+    {
+      "title": "Voice Assistant",
+      "description": "Built a voice assistant using Python with text-to-speech and speech recognition functionalities...",
+      "link": "https://github.com/mahekp05/Voice-Assistant-"
+    },
+    {
+      "title": "Flappy Bird",
+      "description": "Created a fully functional clone of Flappy Bird using Unity and C#...",
+      "link": "#"
+    },
+    {
+      "title": "Data Visualization",
+      "description": "Leveraged Tableau to build interactive dashboards and visualizations...",
+      "link": "https://github.com/mahekp05/tableau-project"
+    },
+    {
+      "title": "Painting Rock the Bull in Impressionist Style",
+      "description": "This project applies Neural Style Transfer (NST) to blend a content image with the artistic style of another...",
+      "link": "https://github.com/mahekp05/NST"
+    }
+  ]

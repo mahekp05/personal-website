@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Protest+Strike&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Corinthia:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
@@ -20,8 +21,6 @@
     <div id = "Home">
         <div class = "container">
             <nav>
-                <li>Mahek Patel</li>
-                <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#react-projects">Projects</a></li>
                 <li><a href="#Contact">Contact</a></li>
@@ -31,9 +30,9 @@
 
     <div id = 'About'>
             <div class = about-text>
-                <p> 
-                    Hello! My name is Mahek Patel, and I am currently pursuing a degree in Computer Science at the University of South Florida. I am passionate about leveraging technology to solve real-world problems, and I’m always eager to learn new things, explore cutting-edge technologies, and build innovative projects.    
-                </p>
+              <h1> “Life is a series of building, testing, changing, and iterating”</h1>
+              <h3>  - Lauren Mosenthal</h3>
+              <h6> Hi, I’m Mahek Patel. A computer science student with a passion for learning and a love for solving problems. Whether it’s Python, AI/ML, or tackling new challenges, I’m here to grow, create, and make an impact. Let’s build something meaningful together.</h6>
             </div>
 
             <div class = 'about-headshot'> 
@@ -61,7 +60,9 @@
 
     <!-- Babel for JSX (Development Only) -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
+    <!-- Add React Router CDN -->
+    <script src="https://unpkg.com/react-router-dom@6/dist/react-router-dom.min.js"></script>
+    
     <script type="text/babel">
         // React Component for the Projects Section
         /*
@@ -69,50 +70,72 @@
         Input: title, description, link
         Output: return jsx decribing what component should look like in UI -- using h3, p, a
         */
+       
         const Project = ({ title, description, link }) => {
           return (
             <div className="project-card">
               <h3>{title}</h3>
               <p>{description}</p>
               <a href={link} target="_blank">GitHub Repo</a>
+              <a href={`/project.html?title=${encodeURIComponent(title)}`}>
+              <button></button> </a>
             </div>
           );
         };
-      /*Project renders list of components
-      projectList -- array with each representing a project
-      map() used to iterate over array to create project component for each item*/
-        const Projects = () => {
-          const projectList = [
-            //Project 1
-            { title: 'Reinforcement Learning: Super Mario Bros', 
-            description: 'Developed a reinforcement learning model to autonomously navigate through levels of Super Mario Bros. The model was trained using state-action pairs to maximize rewards, successfully demonstrating an agent capable of learning from gameplay data to optimize performance. Implemented using Python and TensorFlow.', 
-            link: 'https://github.com/mahekp05/Reinforcement-Learning-Projects/blob/main/Mario.ipynb' },            
-            //Project 2
-            { title: 'Voice Assistant', 
-            description: 'Built a voice assistant using Python with text-to-speech and speech recognition functionalities. Integrated libraries like Pyttsx3 and SpeechRecognition, allowing the assistant to perform tasks such as fetching information from the web, playing music, and delivering jokes. Enhanced with Selenium WebDriver for web automation.', 
-            link: 'https://github.com/mahekp05/Voice-Assistant-' },
-            //Project 3
-            { title: 'Flappy Bird', 
-            description: 'Created a fully functional clone of Flappy Bird using Unity and C#. Implemented core gameplay features, including player controls, scoring, difficulty scaling, and object collisions. Integrated Unity’s physics engine to simulate realistic bird movement and obstacle interactions.', 
-            link: '#' },
-            //Project 4
-            { title: 'Data Visualization', 
-            description: 'Leveraged Tableau to build interactive dashboards and visualizations, showcasing insights from complex datasets. Designed charts and graphs to explore trends, compare metrics, and communicate data-driven insights effectively. Shared results through interactive visual reports hosted on Tableau Public', 
-            link: 'https://github.com/mahekp05/tableau-project'},
-            //Project 5
-            { title: 'Painting Rock the Bull in Impressionist Style',
-            description: "This project applies Neural Style Transfer (NST) to blend a content image with the artistic style of another using a pre-trained TensorFlow model. It preprocesses the images, transfers the style, and generates a final image that retains the content's structure but adopts the style's visual patterns. The output is visualized and saved for use in creative applications like digital art and media design.", 
-            link: 'https://github.com/mahekp05/NST'}
-          ];
-      
+
+      const Projects = () => {
+        const [projects, setProjects] = React.useState([]);
+
+        React.useEffect(() => {
+          // Fetch the JSON file
+          fetch('./projects.json') // Use './projects.json' if the file is in the same directory
+          .then((response) => response.json())
+          .then((data) => setProjects(data))
+          .catch((error) => console.error('Error fetching projects:', error));        }, []);
+
+        return (
+          <div className="scroll-container-horizontal">
+            {projects.map((project, index) => (
+              <Project key={index} title={project.title} description={project.description} link={project.link} />
+            ))}
+          </div>
+          );
+      };
+
+      const ProjectDetails = () => {
+      // Extract the project title from the URL
+      const { title } = useParams();
+      const decodedTitle = decodeURIComponent(title);
+
+      // Fetch project details based on the title (you can modify this logic)
+      const project = projects.find((p) => p.title === decodedTitle);
+
+      return (
+        <div>
+          <h1>{decodedTitle}</h1>
+          {project ? (
+            <>
+              <p>{project.description}</p>
+              <a href={project.link} target="_blank">GitHub Repo</a>
+            </>
+          ) : (
+            <p>Project not found.</p>
+          )}
+        </div>
+        );
+      };
+
+      const App = () => {
           return (
-            <div className="scroll-container-horizontal">
-              {projectList.map((project, index) => (
-                <Project key={index} title={project.title} description={project.description} link={project.link} />
-              ))}
-            </div>
+            <Router>
+              <Routes>
+                <Route path="/" element={<Projects />} />
+                <Route path="/project/:title" element={<ProjectDetails />} />
+              </Routes>
+            </Router>
           );
-        };
+      };
+
       
         // Render the Projects component inside the root div with id="react-projects"
         ReactDOM.render(<Projects />, document.getElementById('react-projects'));
