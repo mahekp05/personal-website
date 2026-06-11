@@ -1,3 +1,6 @@
+import Header from "../components/Header";
+
+
 type NoteCardProps = {
   note: {
     number: string;

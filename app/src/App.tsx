@@ -1,20 +1,23 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Projects from "./pages/Projects";
+import Work from "./pages/Work";
 import FieldNotes from "./pages/FieldNotes";
 import Now from "./pages/Now";
 
 function App() {
   return (
     <BrowserRouter>
+      <Header />
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/work" element={<Work />} />
         <Route path="/notes" element={<FieldNotes />} />
         <Route path="/now" element={<Now />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
