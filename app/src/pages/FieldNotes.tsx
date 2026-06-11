@@ -1,6 +1,5 @@
 import { notes } from "../data/notes";
 import NoteCard from "../components/NoteCard";
-import Header from "../components/Header";
 
 export default function FieldNotes() {
   return (

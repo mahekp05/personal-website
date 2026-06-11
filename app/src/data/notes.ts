@@ -7,13 +7,19 @@ export type Note = {
 
 export const notes: Note[] = [
   {
-    id: "001",
+    number: "001",
+    title: "Starting at ConnexPay",
+    category: "Internship",
+    date: "June 2026",
+  },
+  {
+    number: "002",
     title: "Building AI Course Companion",
     category: "Engineering",
     date: "June 2026",
   },
   {
-    id: "002",
+    number: "003",
     title: "CodePath Journey",
     category: "Interview Prep",
     date: "June 2026",
