@@ -1,5 +1,4 @@
-import Header from "../components/Header";
-import { experience, projects } from "../data/work";
+import { experience } from "../data/experience";
 
 function WorkCard({ item }: { item: (typeof experience)[number] }) {
   return (
@@ -32,7 +31,6 @@ function WorkCard({ item }: { item: (typeof experience)[number] }) {
 export default function Work() {
   return (
     <>
-      <Header />
 
       <main className="page">
         <div className="stack">
@@ -45,13 +43,6 @@ export default function Work() {
         <section className="stack">
           <h2>Experience</h2>
           {experience.map((item) => (
-            <WorkCard key={item.id} item={item} />
-          ))}
-        </section>
-
-        <section className="stack">
-          <h2>Projects</h2>
-          {projects.map((item) => (
             <WorkCard key={item.id} item={item} />
           ))}
         </section>

@@ -1,5 +1,5 @@
 export const about = {
-  title: "The Long Story",
+  title: "Why me?",
 
   intro: "I've always been curious about how things work.",
 
@@ -17,3 +17,4 @@ export const about = {
     "This site is where I collect those thoughts. Some are projects. Some are technical deep dives. Some are reflections.",
   ],
 };
+

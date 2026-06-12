@@ -5,13 +5,7 @@ function Home() {
         <h1>Hi, I'm Mahek.</h1>
 
         <p className="hero-intro">
-          I'm a software engineer, researcher, and chronic note-taker.
-        </p>
-
-        <p className="hero-text">
-          I build AI-powered tools, backend systems, and automation workflows
-          that help people learn, work, and make better decisions.
-        </p>
+          I'm a software engineer, researcher, and builder of tools that actually get used        </p>
       </section>
     </main>
   );

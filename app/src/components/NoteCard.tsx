@@ -2,6 +2,7 @@ type Note = {
   number: string;
   title: string;
   category: string;
+  excerpt: string;
   date: string;
 };
 
@@ -12,15 +13,18 @@ type NoteCardProps = {
 function NoteCard({ note }: NoteCardProps) {
   return (
     <article className="note-card">
-      <div>
-        <p className="note-number">Field Note #{note.number}</p>
-        <h3>{note.title}</h3>
+      <div className="note-card-top">
+        <p className="note-number">#{note.number}</p>
+        <p className="note-category">{note.category}</p>
+        <h2>{note.title}</h2>
       </div>
 
-      <div className="note-meta">
-        <span>{note.category}</span>
+      <p className="note-excerpt">{note.excerpt}</p>
+
+      <p className="note-meta">
         <span>{note.date}</span>
-      </div>
+        <span aria-hidden="true">→</span>
+      </p>
     </article>
   );
 }

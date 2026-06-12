@@ -7,9 +7,9 @@ export default function Header() {
         <Link to="/" className="site-logo">
           Mahek Patel
         </Link>
-        <Link to="/notes">Notes</Link>
-        <Link to="/work">Work</Link>
-        <Link to="/now">Now</Link>
+        <Link to="/notes">Thoughts</Link>
+        <Link to="/work">Experience</Link>
+        <Link to="/now">Projects</Link>
         <Link to="/about">About</Link>
       </nav>
     </header>
