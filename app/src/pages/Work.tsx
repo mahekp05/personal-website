@@ -4,6 +4,7 @@ function WorkCard({ item }: { item: (typeof experience)[number] }) {
   return (
     <div className="note-card">
       <h3>{item.title}</h3>
+      <p className="work-date">{item.period}</p>
 
       <p>{item.description}</p>
 
@@ -34,7 +35,7 @@ export default function Work() {
 
       <main className="page">
         <div className="stack">
-          <h1>Work</h1>
+          <h1>Experience</h1>
           <p>
             A collection of professional experiences and projects I've worked on.
           </p>
