@@ -176,6 +176,32 @@ h3 {
   color: #5f5147;
 }
 
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.hero {
+  max-width: 760px;
+}
+
+.hero-intro {
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+section h2 {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-bottom: 24px;
+
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
 @media (max-width: 760px) {
   .site-header {
     align-items: flex-start;
@@ -188,3 +214,4 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+

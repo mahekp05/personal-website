@@ -1,7 +1,7 @@
 export type WorkItem = {
   id: number;
   title: string;
-  period: string;
+  period?: string;
   description: string;
   github?: string;
   demo?: string;

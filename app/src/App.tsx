@@ -7,7 +7,7 @@ import Work from "./pages/Work";
 import FieldNotes from "./pages/FieldNotes";
 import NotePage from "./pages/NotePage";
 import Now from "./pages/Now";
-
+import Footer from "./components/Footer";
 function App() {
   return (
     <BrowserRouter>
@@ -22,8 +22,11 @@ function App() {
         <Route path="/now" element={<Now />} />
         <Route path="/about" element={<About />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 }
+
 
 export default App;
