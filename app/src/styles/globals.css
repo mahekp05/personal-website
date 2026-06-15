@@ -136,7 +136,8 @@ nav a:hover {
 }
 
 .hero {
-  width: min(100%, 980px);
+  width: min(100%, 1100px);
+  margin: 0 auto;
 }
 
 .hero-intro,
@@ -154,8 +155,14 @@ nav a:hover {
 .page-header,
 .prose,
 .notes-list,
-.blog-list {
-  width: min(100%, 820px);
+.blog-list,
+.project-grid,
+.tech-section,
+.ticket-stack,
+.stack,
+.blog-page {
+  width: min(100%, 1100px);
+  margin: 0 auto;
 }
 
 .page-header {
