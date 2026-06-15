@@ -1,20 +1,15 @@
 export const about = {
   title: "Why me?",
 
-  intro: "I've always been curious about how things work.",
+  intro: "I'm a computer science grad from the University of South Florida, and I've always been wired to ask how things work and then go build them.",
 
   sections: [
-    "That curiosity eventually led me to computer science at the University of South Florida, where I discovered that software engineering is really a combination of problem-solving, creativity, and continuous learning.",
+    "That curiosity led me through research, engineering, and community-building. As an undergraduate researcher, I helped ship AI-powered educational tools that reached over 1,000 students.",
 
-    "Since then, I've spent my time building systems, researching AI, leading student communities, and asking far more questions than I have answers to.",
+    "I've led student engineering communities, designed backend systems, and spent a lot of time at the intersection of AI, automation, and technology that actually serves people.",
 
-    "As an Undergraduate Research Assistant, I helped build AI-powered educational tools used by over 1,000 students.",
+    "I'm the kind of engineer who documents the lessons as much as the code because the thinking behind the build matters just as much as the build itself.",
 
-    "My interests today sit at the intersection of AI systems, backend engineering, automation, and human-centered technology.",
-
-    "Outside of engineering, you'll usually find me documenting lessons from projects, exploring new ideas, reading about technology, or trying to stay consistent in the gym.",
-
-    "This site is where I collect those thoughts. Some are projects. Some are technical deep dives. Some are reflections.",
+    "This site is where that thinking lives. Some of it is projects. Some is technical deep dives. Some is just reflection on what I'm figuring out.",
   ],
 };
-

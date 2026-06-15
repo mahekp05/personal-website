@@ -16,7 +16,7 @@ export default function FieldNotes() {
         {notes.map((note) => (
           <article className="blog-preview" key={note.slug}>
             <p className="note-meta">
-              {note.number} · {note.date}
+              {note.date}
             </p>
 
             <h2>{note.title}</h2>

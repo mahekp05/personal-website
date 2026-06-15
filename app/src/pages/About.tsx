@@ -17,6 +17,22 @@ export default function About() {
           ))}
         </section>
 
+<section className="tech-section">
+  <h2>Tools I Use</h2>
+
+  <div className="tech-cloud">
+    <span>Python</span>
+    <span>TypeScript</span>
+    <span>React</span>
+    <span>PostgreSQL</span>
+    <span>PHP</span>
+    <span>Google Cloud</span>
+    <span>Azure OpenAI</span>
+    <span>Gemini</span>
+    <span>Docker</span>
+    <span>Git</span>
+  </div>
+</section>
       </main>
     </>
   );

@@ -2,17 +2,31 @@ import { experience } from "../data/experience";
 
 function WorkCard({ item }: { item: (typeof experience)[number] }) {
   return (
-    <div className="note-card">
-      <h3>{item.title}</h3>
-      <p className="work-date">{item.period}</p>
+    <article className="project-card">
+      <div className="project-card-top">
 
-      <p>{item.description}</p>
+        {item.period && (
+          <span className="project-status">
+            {item.period}
+          </span>
+        )}
+      </div>
+
+      <h2>{item.title}</h2>
+
+      <p className="project-description">
+        {item.description}
+      </p>
 
       {item.technologies && (
-        <p className="tech-stack">{item.technologies.join(" • ")}</p>
+        <div className="project-tech">
+          {item.technologies.map((tech) => (
+            <span key={tech}>{tech}</span>
+          ))}
+        </div>
       )}
 
-      <div className="links">
+      <div className="project-links">
         {item.github && (
           <a href={item.github} target="_blank" rel="noreferrer">
             GitHub →
@@ -21,11 +35,11 @@ function WorkCard({ item }: { item: (typeof experience)[number] }) {
 
         {item.demo && (
           <a href={item.demo} target="_blank" rel="noreferrer">
-            Live Demo →
+            Learn More →
           </a>
         )}
       </div>
-    </div>
+    </article>
   );
 }
 
