@@ -1,40 +1,82 @@
-# 🌐 Mahek Patel — Personal Portfolio Website
+# 🌐 Mahek Patel — Personal Portfolio (Source)
 
-This is the source code for my personal website, built to showcase my work, skills, and ongoing projects in AI, software development, and product thinking. The site features dynamic content loading, a clean interface, and live project data powered by JSON.
+This repository contains the source code for my personal portfolio website, built with React, TypeScript, and Vite. The site showcases my projects, experience, writing, and technical interests.
 
 ---
 
-## 🔍 Live Preview
+## 🔍 Live Site
 
-🚀 **Hosted via GitHub Pages**  
-🌐 [Visit the website](https://mahekp05.github.io/personal-website/)
+Visit the portfolio at:
+
+**https://www.mahek.dev**
+
+The site is deployed using **Azure Static Web Apps**, which provides automated builds and global hosting directly from the GitHub repository.
 
 ---
 
 ## 🛠 Tech Stack
 
-- **HTML** – structure and content
-- **CSS** – responsive styling and layout
-- **JavaScript / React** – interactivity and future component enhancements
-- **JSON** – dynamic data source for projects
+* **Vite** – fast build tooling and development server
+* **React + TypeScript** – frontend application and UI components
+* **CSS** – custom styling and responsive layouts
+* **Azure Static Web Apps** – deployment, hosting, and CI/CD
+* **GitHub** – source control and deployment integration
 
 ---
 
 ## 📁 Project Structure
 
-| File                  | Description |
-|-----------------------|-------------|
-| `index.html`          | Main webpage and layout |
-| `style.css`           | Site styling and responsive design |
-| `projects.json`       | JSON file holding project info (title, links, etc.) |
-| `headshot.jpg`        | Personal photo for site |
-| `basic outline.txt`   | Original layout notes and concept |
+* `app/` — main Vite + React application
+
+  * `index.html` — application entry point
+  * `package.json` — dependencies and npm scripts
+  * `src/`
+
+    * `components/` — reusable UI components
+    * `pages/` — site pages
+    * `data/` — portfolio content and project data
+    * `styles/` — styling files
+  * `public/` — static assets
+
+Other root files:
+
+* `README.md` — project documentation
+* `.gitignore`
 
 ---
 
-## 📦 How to Run Locally
+## 🚀 Deployment
+
+The portfolio is automatically deployed through **Azure Static Web Apps**.
+
+Whenever changes are pushed to the main branch, Azure builds the Vite application and publishes the latest version of the site.
+
+Production URL:
+
+**https://www.mahek.dev**
+
+---
+
+## 📦 Running Locally
+
+From the repository root:
 
 ```bash
-git clone https://github.com/mahekp05/personal-website.git
-cd personal-website
-open index.html  # or double-click to launch in browser
+cd app
+npm install
+npm run dev
+```
+
+Common scripts:
+
+* `npm run dev` — start the development server
+* `npm run build` — create a production build
+* `npm run preview` — preview the production build locally
+
+---
+
+## Contributing
+
+This is a personal portfolio project, but feedback and suggestions are always welcome.
+
+Most application code lives inside `app/src/`, including pages, components, content, and styling.
