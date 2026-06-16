@@ -9,11 +9,8 @@ function Home() {
         </p>
 
         <p className="hero-subtitle">
-          Recent Computer Science graduate from the University of South Florida
-          with experience building AI-powered educational tools, automation
-          systems, and machine learning applications.
+          Recent Computer Science graduate from the University of South Florida with experience building backend systems, AI applications, and production software used by thousands of users.        
         </p>
-
         <p className="hero-open">
           Open to Software Engineer, AI Engineer, and Full-Stack Engineer
           opportunities.
