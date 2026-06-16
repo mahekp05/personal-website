@@ -105,14 +105,19 @@ h3 {
 
 .site-title,
 .site-logo {
-  color: var(--text-h);
+  font-size: 1.5rem;
   font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-h);
+  margin-right: auto;
 }
 
 nav {
   display: flex;
+  align-items: center;
   gap: clamp(14px, 3vw, 24px);
   flex-wrap: wrap;
+  width: 100%;
 }
 
 nav a {
@@ -125,31 +130,58 @@ nav a:hover {
   color: var(--accent);
 }
 
+nav a:not(.site-logo) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Page layout */
 
-.page {
-  flex: 1;
-  padding: clamp(28px, 5vw, 72px);
-  display: flex;
-  flex-direction: column;
-  gap: clamp(40px, 6vw, 72px);
-}
 
 .hero {
   width: min(100%, 1100px);
   margin: 0 auto;
 }
 
-.hero-intro,
-.intro {
-  width: min(100%, 820px);
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
-  line-height: 1.7;
-  color: var(--text);
+.hero h1 {
+  margin-bottom: 1.25rem;
 }
+
+.hero-intro {
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  width: min(100%, 700px);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.hero-open {
+  display: inline-block;
+  margin-bottom: 3rem;
+
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+
+  background: #f7e2ec;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 
 .hero p + p {
   margin-top: 20px;
+}
+
+.page {
+  flex: 1;
+  padding: clamp(28px, 5vw, 72px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(56px, 8vw, 96px);
 }
 
 .page-header,
@@ -343,6 +375,12 @@ nav a:hover {
   border-radius: 22px;
   padding: 1.6rem;
   box-shadow: var(--shadow);
+}
+
+.featured-projects .project-card {
+  background: transparent;
+  border: 1px solid var(--border);
+  box-shadow: none;
 }
 
 .project-card-top {

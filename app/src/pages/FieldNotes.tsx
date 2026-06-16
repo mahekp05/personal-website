@@ -5,7 +5,6 @@ export default function FieldNotes() {
   return (
     <main className="page">
       <div className="page-header">
-        <p className="eyebrow">Field Notes</p>
         <h1>Thoughts, lessons, and things I’m learning.</h1>
         <p className="intro">
           A small collection of reflections from projects, work, school, and life.
