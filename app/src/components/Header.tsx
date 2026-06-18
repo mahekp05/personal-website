@@ -15,19 +15,19 @@ export default function Header() {
         </Link>
 
         <Link to="/work">
-          <Briefcase size={18} />
+          <Briefcase size={18} /> Experience
         </Link>
 
-        <Link to="/now">
-          <FolderKanban size={18} />
+        <Link to="/projects">
+          <FolderKanban size={18} /> Projects
         </Link>
 
         <Link to="/notes">
-          <PenSquare size={18} />
+          <PenSquare size={18} /> Writing
         </Link>
 
         <Link to="/about">
-          <User size={18} />
+          <User size={18} /> About
         </Link>
       </nav>
     </header>

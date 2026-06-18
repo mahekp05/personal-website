@@ -8,6 +8,7 @@ import Thoughts from "./pages/Thoughts";
 import ThoughtPage from "./pages/ThoughtPage";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
+import { Navigate } from "react-router-dom";
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/now" element={<Navigate to="/projects" replace />} />
         <Route path="/notes" element={<Thoughts />} />
         <Route path="/notes/:slug" element={<ThoughtPage />} />
         <Route path="/field-notes/:slug" element={<ThoughtPage />} />
-        <Route path="/now" element={<Projects />} />
         <Route path="/about" element={<About />} />
       </Routes>
 

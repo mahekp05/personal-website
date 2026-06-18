@@ -1,22 +1,19 @@
+import { contact } from "../data/contact";
+
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-links">
-        <a href="mailto:mahekpatel@ufl.edu">Email</a>
-        <a
-          href="https://linkedin.com/in/mahekpat3l"
-          target="_blank"
-          rel="noreferrer"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://github.com/mahekp05"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub
-        </a>
+        {contact.links.map((link) => (
+          <a
+            key={link.label}
+            href={link.href}
+            target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+            rel={link.href.startsWith("mailto:") ? undefined : "noreferrer"}
+          >
+            {link.label}
+          </a>
+        ))}
       </div>
 
       <small>© {new Date().getFullYear()} Mahek Patel</small>

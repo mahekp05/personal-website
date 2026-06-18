@@ -9,11 +9,10 @@ function Home() {
         </p>
 
         <p className="hero-subtitle">
-          Recent Computer Science graduate from the University of South Florida with experience building backend systems, AI applications, and production software used by thousands of users.        
+          Recent Computer Science graduate from the University of South Florida targeting Software Engineer, Backend Engineer, AI Engineer, and Full-Stack Engineer roles.
         </p>
         <p className="hero-open">
-          Open to Software Engineer, AI Engineer, and Full-Stack Engineer
-          opportunities.
+          Experience building backend systems, AI applications, and production software used by thousands of users.
         </p>
       </section>
 
@@ -24,26 +23,16 @@ function Home() {
           <span>Python</span>
           <span>TypeScript</span>
           <span>JavaScript</span>
-          <span>Go</span>
-          <span>PHP</span>
           <span>React</span>
           <span>Node.js</span>
-          <span>Flask</span>
           <span>PostgreSQL</span>
-          <span>MongoDB</span>
           <span>REST APIs</span>
           <span>Docker</span>
           <span>Google Cloud</span>
-          <span>GitHub Actions</span>
           <span>CI/CD</span>
-          <span>Gemini</span>
-          <span>Azure</span>
           <span>RAG</span>
           <span>LLM Applications</span>
-          <span>Prompt Engineering</span>
           <span>Model Evaluation</span>
-          <span>TensorFlow</span>
-          <span>scikit-learn</span>
           <span>Git</span>
         </div>
       </section>
@@ -67,7 +56,7 @@ function Home() {
             </div>
 
             <div className="ticket-stub">
-              <span className="ticket-date">May 2025 – 2026</span>
+              <span className="ticket-date">May 2025 – May 2026</span>
             </div>
           </article>
 
@@ -95,17 +84,17 @@ function Home() {
               <h3>Break Through Tech</h3>
 
               <p className="ticket-role">
-                AI Fellow
+                AI Fellowship
               </p>
 
               <p>
-                Built multimodal machine learning models for dermatology
+                Built multimodal machine learning model for dermatology
                 classification with a focus on inclusivity across skin tones.
               </p>
             </div>
 
             <div className="ticket-stub">
-              <span className="ticket-date">May 2025 – 2026</span>
+              <span className="ticket-date">May 2025 – May 2026</span>
             </div>
           </article>
         </div>
@@ -124,7 +113,7 @@ function Home() {
             </p>
 
             <div className="project-links">
-              <a href="/now">View Project →</a>
+              <a href="/projects">View Project →</a>
             </div>
           </article>
 
@@ -138,7 +127,7 @@ function Home() {
             </p>
 
             <div className="project-links">
-              <a href="/now">View Project →</a>
+              <a href="/projects">View Project →</a>
             </div>
           </article>
         </div>
