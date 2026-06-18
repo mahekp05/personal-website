@@ -53,6 +53,16 @@ function Home() {
                 Built AI-powered educational tools deployed across 30+
                 university courses and used by more than 1,000 students.
               </p>
+              <div className="project-links">
+                <a
+                  href="https://www.usf.edu/ai-cybersecurity-computing/news/2026/bellini-college-expands-ai-course-companion-to-enhance-teaching-and-student-learning.aspx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read Article →
+                </a>
+              </div>
+
             </div>
 
             <div className="ticket-stub">
@@ -91,6 +101,16 @@ function Home() {
                 Built multimodal machine learning model for dermatology
                 classification with a focus on inclusivity across skin tones.
               </p>
+              <div className="project-links">
+                <a
+                  href="https://github.com/nbm016/multimodal_skin_condition_classification_skinterest_tech_2a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project  →
+                </a>
+              </div>
+
             </div>
 
             <div className="ticket-stub">
@@ -113,7 +133,13 @@ function Home() {
             </p>
 
             <div className="project-links">
-              <a href="/projects">View Project →</a>
+              <a
+                href="https://github.com/brandoncintron/plans4you"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub →
+              </a>
             </div>
           </article>
 
@@ -127,11 +153,39 @@ function Home() {
             </p>
 
             <div className="project-links">
-              <a href="/projects">View Project →</a>
+              <a
+                href="https://github.com/mahekp05/security-agent"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub →
+              </a>
+            </div>
+          </article>
+
+          <article className="project-card">
+            <h3>AI Startup Trends</h3>
+
+            <p className="project-description">
+              Analyzed 54,000+ AI startup launches on Product Hunt using custom data
+              pipelines and network analysis to identify ecosystem growth, engagement
+              trends, and winner-take-all dynamics.
+            </p>
+
+            <div className="project-links">
+              <a
+                href="https://github.com/mahekp05/ai-startup-trends-product-hunt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub →
+              </a>
             </div>
           </article>
         </div>
       </section>
+
+      
 
     </main>
   );
